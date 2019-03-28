@@ -9,7 +9,7 @@ public class InsertSort {
             //待插入的元素
             int guard=a[i];
             //记录插入位置
-            int location;
+            int location=-1;
             //二次遍历进行插入
             for(int j=i-1;j>=0;j--){
                 if(guard<a[j]){
@@ -21,9 +21,11 @@ public class InsertSort {
                     location=j+1;
                     break;
                 }
-                //之前未加这一行导致数据丢失
-                a[location]=guard;
+
             }
+            //之前未加这一行导致数据丢失
+            a[location]=guard;
+
         }
     }
     public static void main(String[] args) {
